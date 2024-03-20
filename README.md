@@ -75,6 +75,26 @@ PM-profiler is available via terminal either locally or remotely. Please run
 to check the parameters of the automatic pipeline.
 ## Example
 In the example below,PM-profiler will annotate the sequences in query.fasta based on database.fa and taxonomy.txt, writing the results into output.hwl.txt.
+```
 	PM-profiler -i query.fasta -d database.fa  -m taxonomy.txt -o output
+```
  Additionally, PM-profiler offers several parameters for more detailed sequence annotation. You can use the ```-M 1``` parameter to output files annotated with LCA. Adjust the sequence similarity threshold and HWL's Taxonomy Consistency threshold using the ```-c``` and ```-s``` commands. If you need the unprocessed annotation results, you can also output the raw annotation files using the hidden parameter ```-R t```.
+## Output
+PM-profiler supports outputting both HWL and LCA annotations simultaneously, with the results of the two annotations as follows:
+```
+HWL output
+Query sequence id	Database sequence id 	Taxonomy	Consistency
+GCF_008572145.1_ASM857214v1_genomic_64_0_2086_site:_3156_10	GCF_003464725.1_1	k__Bacteria; p__Bacteroidetes; c__Bacteroidia; o__Bacteroidales; f__Bacteroidaceae; g__Phocaeicola; s__Phocaeicola_dorei;	0.733333
+```
+```
+LCA output
+Query sequence id	Consistency
+GCF_004347525.1_ASM434752v1_genomic_10_0_2016_site:_4430_58	k__Bacteria;	p__Bacteroidetes;	c__Bacteroidia;	o__Bacteroidales;	f__Bacteroidaceae;	g__Phocaeicola;	s__Phocaeicola_dorei;
+```
+For HWL output, PM-profiler outputs the annotation with the highest Consistency and a database sequence that possesses this annotation.
+For LCA, PM-profiler only outputs the annotation and does not output the consistency (all are 1).
+# Contact
 
+Any problem please contact Qdu_bioinfo team
+	Qdu_bioinfo	qdu_bioinfo@163.com
+ 	Shi Haobo	18339183978@163.com
