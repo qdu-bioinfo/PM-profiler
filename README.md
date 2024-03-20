@@ -1,5 +1,4 @@
 # PM-profiler
-# Code for PM-profiler, README will be updated in the next few days.
 
 # Introduction
 
@@ -19,6 +18,16 @@ OpenMP library is the C/C++ parallel computing library. Most Linux releases have
 ## Automatic installation (recommended)
 
 PM-profiler provides a fully automatic installer for easy installation.
+
+#### **a. Download the package**
+
+git clone https://github.com/qdu-bioinfo/PM-profiler.git
+
+#### **b. Install by installer**
+
+	
+	cd PM-profiler
+	source install.sh
 
 a. Extract the package:
 
@@ -47,7 +56,6 @@ b. Configure the environment variables (default environment variable configurati
 
 	export PMprofiler=Path to PM-profiler
 	export PATH="$PATH:$PMprofiler/bin"
-	export PATH="$PATH:$PMprofiler/Rscript"
     
 c. Then, active the environment variables
 
@@ -59,4 +67,10 @@ d. Compile the source code:
 	make
 
 # Typical Usages
-will be updated in the next few days
+PM-profiler is available via terminal either locally or remotely. Please run
+
+	PM-pipeline -h
+
+to check the parameters of the automatic pipeline.
+
+
