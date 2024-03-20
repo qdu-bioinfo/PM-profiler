@@ -73,5 +73,8 @@ PM-profiler is available via terminal either locally or remotely. Please run
 	PM-pipeline -h
 
 to check the parameters of the automatic pipeline.
-
+## Example
+In the example below,PM-profiler will annotate the sequences in query.fasta based on database.fa and taxonomy.txt, writing the results into output.hwl.txt.
+	PM-profiler -i query.fasta -d database.fa  -m taxonomy.txt -o output
+ Additionally, PM-profiler offers several parameters for more detailed sequence annotation. You can use the ```-M 1``` parameter to output files annotated with LCA. Adjust the sequence similarity threshold and HWL's Taxonomy Consistency threshold using the ```-c``` and ```-s``` commands. If you need the unprocessed annotation results, you can also output the raw annotation files using the hidden parameter ```-R t```.
 
