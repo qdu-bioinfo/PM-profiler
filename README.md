@@ -24,20 +24,21 @@ PM-profiler provides a fully automatic installer for easy installation.
 git clone https://github.com/qdu-bioinfo/PM-profiler.git
 ```
 #### **b. Install by installer**
-
-	
+```
 	cd PM-profiler
 	source install.sh
-
-a. Extract the package:
-
+```
+If you are unable to clone directly, try downloading and unzipping from the release directly.
+#### **a. Download the package**
+```
+	wget https://github.com/qdu-bioinfo/PM-profiler/archive/v1.0.0/PM-profiler.tar.gz
 	tar -xzvf PM-profiler.tar.gz
-
-b. Install
-	
+```
+#### **b. Install by installer**
+```
 	cd PM-profiler
 	source install.sh
-
+```
 ##### Tips for the Automatic installation
 
 1. Please **“cd PM-profiler”** before run the automatic installer.
