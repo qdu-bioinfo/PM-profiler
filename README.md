@@ -20,9 +20,9 @@ OpenMP library is the C/C++ parallel computing library. Most Linux releases have
 PM-profiler provides a fully automatic installer for easy installation.
 
 #### **a. Download the package**
-
+```
 git clone https://github.com/qdu-bioinfo/PM-profiler.git
-
+```
 #### **b. Install by installer**
 
 	
