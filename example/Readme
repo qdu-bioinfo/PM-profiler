@@ -1,0 +1,18 @@
+#Here we provide a demo with a human gut microbiome sample
+#
+#To run the demo, you can either 
+#
+#sh Readme
+#
+#or
+#type the following commands. 
+#
+#Commands:
+tar -zxvf ../database/Refseq.tar.gz -C ../database
+PM-profiler -i test.fasta -d ../database/Refseq_database.fa  -m ../database/Refseq_taxonomy.txt -o ./output -M 1
+#
+#Output description
+#All output results are contained in the output directory "output.".
+#Check the "out_dir/index.html" for overview of the results.
+#
+#This demo run should take about 1 hour on a recommended computer.

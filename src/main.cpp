@@ -74,8 +74,8 @@ int main(int argc, char * argv[]){
         if (Taxa_mode == 1)
             taxa.Parse_taxa_LCA(res, sample_seqs, (outfile + ".lca.txt").c_str(), Coren);
             //cout << "Output LCA: " << outfile + ".lca.txt" << endl; //debug
-        taxa.Parse_taxa_Retax(res, sample_seqs, (outfile + ".retax.txt").c_str(), Coren , Consistency);
-        //cout << "Output Retax: " << outfile + ".retax.txt" << endl; //debug
+        taxa.Parse_taxa_HWL(res, sample_seqs, (outfile + ".hwl.txt").c_str(), Coren , Consistency);
+        //cout << "Output HWL: " << outfile + ".hwl.txt" << endl; //debug
          cout << "Taxonomy parse finished" << endl;
         
         delete [] res;

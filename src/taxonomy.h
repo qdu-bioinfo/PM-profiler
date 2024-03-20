@@ -26,10 +26,10 @@ public:
     Taxonomy(const char * infilename, vector <Sequence> & seqs);
 	
 	int Parse_taxa_LCA(vector<int> res, string & res_taxa);
-	int Parse_taxa_Retax(vector<int> res, string & res_taxa , float consistency);
+	int Parse_taxa_HWL(vector<int> res, string & res_taxa , float consistency);
     
     int Parse_taxa_LCA(vector<int> * res, vector <Sequence> & seqs, const char * outfilename, int coren);
-    int Parse_taxa_Retax(vector<int> * res, vector <Sequence> & seqs, const char * outfilename, int coren ,float consistency);
+    int Parse_taxa_HWL(vector<int> * res, vector <Sequence> & seqs, const char * outfilename, int coren ,float consistency);
     
     int Parse_taxa_raw(vector <int> * res, vector<Sequence> & seqs, const char * outfilename);
 	
@@ -177,7 +177,7 @@ int Taxonomy::Parse_taxa_Retax(vector<int> res, string & res_taxa){
 }
 */
 
-int Taxonomy::Parse_taxa_Retax(vector<int> res, string & res_taxa , float consistency){
+int Taxonomy::Parse_taxa_HWL(vector<int> res, string & res_taxa , float consistency){
 	
     if (res.size() == 0){ //no mapped res
         res_taxa = unmapped_taxa;
@@ -255,7 +255,7 @@ int Taxonomy::Parse_taxa_LCA(vector<int> * res, vector <Sequence> & seqs, const 
     return seqs.size();
 }
 
-int Taxonomy::Parse_taxa_Retax(vector<int> * res, vector <Sequence> & seqs, const char * outfilename, int coren , float consistency){
+int Taxonomy::Parse_taxa_HWL(vector<int> * res, vector <Sequence> & seqs, const char * outfilename, int coren , float consistency){
     
     string * res_taxa = new string [seqs.size()];
     int * res_rep = new int [seqs.size()];
@@ -264,7 +264,7 @@ int Taxonomy::Parse_taxa_Retax(vector<int> * res, vector <Sequence> & seqs, cons
     
     #pragma omp parallel for schedule(dynamic, 10)
     for(int i = 0; i < seqs.size(); i ++)
-        res_rep[i] = Parse_taxa_Retax(res[i], res_taxa[i],consistency);
+        res_rep[i] = Parse_taxa_HWL(res[i], res_taxa[i],consistency);
     
     ofstream outfile(outfilename, ios::out);
     if (!outfile){
