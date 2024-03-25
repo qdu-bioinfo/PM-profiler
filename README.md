@@ -69,9 +69,9 @@ d. Compile the source code:
 ```
 ## Typical Usages
 PM-profiler is available via terminal either locally or remotely. Please run
-
+```
 	PM-pipeline -h
-
+```
 to check the parameters of the automatic pipeline.
 ### Example
 In the example below,PM-profiler will annotate the sequences in query.fasta based on database.fa and taxonomy.txt, writing the results into output.hwl.txt.
