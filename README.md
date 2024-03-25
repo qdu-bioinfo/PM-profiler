@@ -96,5 +96,7 @@ For LCA, PM-profiler only outputs the annotation and does not output the consist
 # Contact
 
 Any problem please contact Qdu_bioinfo team
-	Qdu_bioinfo	qdu_bioinfo@163.com
- 	Shi Haobo	18339183978@163.com
+```
+Qdu_bioinfo	qdu_bioinfo@163.com
+Shi Haobo	18339183978@163.com
+```
