@@ -53,16 +53,7 @@ a. Extract the package:
 ```
 	tar –xzvf PM-profiler.tar.gz
 ```
-b. Configure the environment variables (default environment variable configuration file is located at “\~/.bashrc” or “\~/.bash_profile”)
-```
-	export PMprofiler=Path to PM-profiler
-	export PATH="$PATH:$PMprofiler/bin"
-```    
-c. Then, active the environment variables
-```
-	source ~/.bashrc
-```
-d. Compile the source code:
+b. Compile the source code:
 ```
 	cd PM-profiler
 	make
@@ -70,7 +61,7 @@ d. Compile the source code:
 ## Typical Usages
 PM-profiler is available via terminal either locally or remotely. Please run
 ```
-	PM-pipeline -h
+	PM-profiler -h
 ```
 to check the parameters of the automatic pipeline.
 ### Example
