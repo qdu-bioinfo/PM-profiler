@@ -1,0 +1,16 @@
+#Here we provide a demo with a human gut microbiome sample
+#
+#To run the demo, you can either 
+#
+#sh Readme
+#
+#or
+#type the following commands. 
+#
+#Commands:
+../bin/PM-profiler -i test.fasta -d ../database/Refseq_database.fa  -m ../database/Refseq_taxonomy.txt -o ./output -M 1
+#
+#Output description
+#All output results are contained in the output file "output.hwl.txt" and "output.lca.txt".
+#
+#This demo run should take about 1-5 minutes on a recommended computer.
