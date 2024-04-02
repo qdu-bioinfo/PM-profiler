@@ -13,14 +13,14 @@ else
 fi
 ### Unzip .tar.gz files in the ./database folder ###
 
-echo -e "\n**Unzipping .tar.gz files in the database folder**"
+echo -e "\n**Unzipping database files in the database folder**"
 
 if [ -d "./database" ]; then
     cd ./database
     for file in *.tar.gz; do
         if [ -f "$file" ]; then
             tar -xzf "$file"
-            echo "Unzipped: $file"
+            echo "${file} unzipped complete!"
         fi
     done
     cd ..

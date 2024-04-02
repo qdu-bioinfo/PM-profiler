@@ -57,12 +57,19 @@ PM-profiler is available via terminal either locally or remotely. Please run
 	PM-profiler -h
 ```
 to check the parameters of PM-profiler.
-### Example
+### Example Command
 In the example below,PM-profiler will annotate the sequences in query.fasta based on database.fa and taxonomy.txt, writing the results into output.hwl.txt.
 ```
 	PM-profiler -i query.fasta -d database.fa  -m taxonomy.txt -o output
 ```
  Additionally, PM-profiler offers several parameters for more detailed sequence annotation. You can use the ```-M 1``` parameter to output files annotated with LCA. Adjust the sequence similarity threshold and HWL's Taxonomy Consistency threshold using the ```-c``` and ```-s``` commands. If you need the unprocessed annotation results, you can also output the raw annotation files using the hidden parameter ```-R t```.
+### Example data in the package
+The PM-profiler package includes a demo dataset of human gut microbiomes with 16S rRNA V4 amplicon-based microbiomes. To run the demo, you can
+```
+	cd example
+	bash Readme
+```
+then the results will be saved in the PM-profiler/example folder under output.hwl.txt and output.lca.txt, where the results for the highest weight leaf node (hwl) will be saved in output.hwl.txt, and the results for the lowest common ancestor will be saved in output.lca.txt.
 ### Output
 PM-profiler supports outputting both HWL and LCA annotations simultaneously, with the results of the two annotations as follows:
 ```
