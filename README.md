@@ -58,7 +58,7 @@ PM-profiler is available via terminal either locally or remotely. Please run
 ```
 to check the parameters of PM-profiler.
 ### Example Command
-In the example below,PM-profiler will annotate the sequences in query.fasta based on database.fa and taxonomy.txt, writing the results into output.hwl.txt.
+In the example below,PM-profiler will annotate the sequences in query.fasta based on database.fa and taxonomy.txt, writing the results into output.hwl.txt. For paired-end reads, we suggest to merge the two pairs for PM-profiler.
 ```
 	PM-profiler -i query.fasta -d database.fa -m taxonomy.txt -o output
 ```
