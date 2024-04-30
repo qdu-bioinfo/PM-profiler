@@ -3,14 +3,14 @@
 ## Introduction
 PM-profiler is a sequence annotation tool for amplicon metagenomic short reads. It implements an extremely rapid taxonomy annotation algorithm, swiftly searching the database for all the most similar sequences, and annotating the results with the Highest Weight Leaf (HWL) and the Lowest Common Ancestor (LCA). PM-profiler is optimized through parallel computing, enabling it to rapidly process large datasets. 
 We recommend that you read the following before using it.
-## System Requirement and Dependency
-### Hardware Requirements
+## System requirement and dependency
+### Hardware requirements
 PMS only requires a standard computer with sufficient RAM to support the operations defined by a user. For typical users, this would be a computer with about 8 GB of RAM. For optimal performance, we recommend a computer with the following specs:
 ```	
 	RAM: 8+ GB
 	CPU: 4+ cores, 3.3+ GHz/core
 ```    
-### Software Requirements
+### Software requirements
 
 OpenMP library is the C/C++ parallel computing library. Most Linux releases have OpenMP already been installed in the system. In Mac OS X, to install the compiler that supports OpenMP, we recommend using the Homebrew package manager:
 ```
@@ -31,7 +31,7 @@ PM-profiler provides a fully automatic installer for easy installation.
 	cd PM-profiler
 	source install.sh
 ```
-#### Tips for the Automatic installation
+#### Tips for the automatic installation
 
 1. Please **“cd PM-profiler”** before run the automatic installer.
 2. If the automatic installer failed, PM-profiler can still be installed manually by the following steps.
@@ -51,13 +51,13 @@ b. Compile the source code:
 	tar -xzvf ./database/Greengenes2.tar.gz -C ./database
 	tar -xzvf ./database/Refseq.tar.gz -C ./database
 ```
-## Typical Usages
+## Typical usages
 PM-profiler is available via terminal either locally or remotely. Please run
 ```
 	PM-profiler -h
 ```
 to check the parameters of PM-profiler.
-### Example Command
+### Example command
 In the example below,PM-profiler will annotate the sequences in query.fasta based on database.fa and taxonomy.txt, writing the results into output.hwl.txt. For paired-end reads, we suggest to merge the two pairs for PM-profiler.
 ```
 	PM-profiler -i query.fasta -d database.fa -m taxonomy.txt -o output
